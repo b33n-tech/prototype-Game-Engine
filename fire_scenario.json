@@ -1,0 +1,103 @@
+{
+  "start": {
+    "text": "Tu es dans la salle de pause. Une odeur de plastique brûlé commence à se répandre. La lumière clignote.",
+    "choices": [
+      {
+        "label": "Tu ouvres la porte et sors immédiatement.",
+        "next": "smoke_hallway",
+        "consequences": {
+          "traits": [
+            "impulsif"
+          ]
+        }
+      },
+      {
+        "label": "Tu déclenches l’alarme incendie.",
+        "next": "smoke_hallway",
+        "consequences": {
+          "traits": [
+            "pragmatique"
+          ]
+        }
+      },
+      {
+        "label": "Tu appelles un collègue resté dans l’open-space.",
+        "next": "smoke_hallway",
+        "consequences": {
+          "traits": [
+            "protecteur"
+          ]
+        }
+      }
+    ]
+  },
+  "smoke_hallway": {
+    "text": "Dans le couloir, la fumée est plus dense. Tu entends des cris étouffés.",
+    "choices": [
+      {
+        "label": "Tu cherches une autre sortie immédiatement.",
+        "next": "exit_choice",
+        "consequences": {
+          "traits": [
+            "suiveur"
+          ]
+        }
+      },
+      {
+        "label": "Tu ramasses un extincteur en te protégeant la bouche.",
+        "next": "exit_choice",
+        "consequences": {
+          "traits": [
+            "pragmatique"
+          ]
+        }
+      },
+      {
+        "label": "Tu cries aux autres de suivre et cours vers la sortie.",
+        "next": "exit_choice",
+        "consequences": {
+          "traits": [
+            "impulsif",
+            "protecteur"
+          ]
+        }
+      }
+    ]
+  },
+  "exit_choice": {
+    "text": "Tu arrives au palier. L’ascenseur est ouvert. L’escalier est accessible mais enfumé.",
+    "choices": [
+      {
+        "label": "Tu prends l’escalier en retenant ta respiration.",
+        "next": "end",
+        "consequences": {
+          "traits": [
+            "pragmatique"
+          ]
+        }
+      },
+      {
+        "label": "Tu tentes l’ascenseur malgré les consignes.",
+        "next": "end",
+        "consequences": {
+          "traits": [
+            "impulsif"
+          ]
+        }
+      },
+      {
+        "label": "Tu cherches d’autres personnes dans l’étage avant de partir.",
+        "next": "end",
+        "consequences": {
+          "traits": [
+            "protecteur"
+          ]
+        }
+      }
+    ]
+  },
+  "end": {
+    "text": "Fin du scénario. Merci pour votre participation.",
+    "choices": []
+  }
+}
